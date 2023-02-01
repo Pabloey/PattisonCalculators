@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './styles/index.css'
 
 const App = () => {
   const [inputBoxes, setInputBoxes] = useState({
@@ -16,7 +17,7 @@ const App = () => {
 
   // handleChange functions holds the information put into the input fields.
   const handleChange = (e) => {
-    setInputBoxes({ ...inputBoxes, [e.target.name]: parseInt(e.target.value) })
+    setInputBoxes({ ...inputBoxes, [e.target.name]: Math.round(parseFloat(e.target.value) * 10) / 10 })
     console.log(e.target.checked)
   }
 
@@ -31,54 +32,54 @@ const App = () => {
           <th>Sieve</th>
         </tr>
         <tr>
-          <td>{inputBoxes.box1}</td>
+          <td className='font-text-size'>{isNaN(inputBoxes.box1) ? 0 : inputBoxes.box1}</td>
           <td><input name="box1" onChange={handleChange}></input></td>
-          <td>#4</td>
+          <td className='font-text-size'>#4</td>
         </tr>
         <tr>
-          <td></td>
+          <td className='font-text-size'>{isNaN(inputBoxes.box2) ? 0 : inputBoxes.box2}</td>
           <td><input name="box2" onChange={handleChange}></input></td>
-          <td>8</td>
+          <td className='font-text-size'>8</td>
         </tr>
         <tr>
-          <td></td>
+          <td className='font-text-size'>{isNaN(inputBoxes.box3) ? 0 : inputBoxes.box3}</td>
           <td><input name="box3" onChange={handleChange}></input></td>
-          <td>10</td>
+          <td className='font-text-size'>10</td>
         </tr>
         <tr>
-          <td></td>
+          <td className='font-text-size'>{isNaN(inputBoxes.box4) ? 0 : inputBoxes.box4}</td>
           <td><input name="box4" onChange={handleChange}></input></td>
-          <td>16</td>
+          <td className='font-text-size'>16</td>
         </tr>
         <tr>
-          <td></td>
+          <td className='font-text-size'>{isNaN(inputBoxes.box5) ? 0 : inputBoxes.box5}</td>
           <td><input name="box5" onChange={handleChange}></input></td>
-          <td>30</td>
+          <td className='font-text-size'>30</td>
         </tr>
         <tr>
-          <td></td>
+          <td className='font-text-size'>{isNaN(inputBoxes.box6) ? 0 : inputBoxes.box6}</td>
           <td><input name="box6" onChange={handleChange}></input></td>
-          <td>40</td>
+          <td className='font-text-size'>40</td>
         </tr>
         <tr>
-          <td></td>
+          <td className='font-text-size'>{isNaN(inputBoxes.box7) ? 0 : inputBoxes.box7}</td>
           <td><input name="box7" onChange={handleChange}></input></td>
-          <td>50</td>
+          <td className='font-text-size'>50</td>
         </tr>
         <tr>
-          <td></td>
+          <td className='font-text-size'>{isNaN(inputBoxes.box8) ? 0 : inputBoxes.box8}</td>
           <td><input name="box8" onChange={handleChange}></input></td>
-          <td>100</td>
+          <td className='font-text-size'>100</td>
         </tr>
         <tr>
-          <td></td>
+          <td className='font-text-size'>{isNaN(inputBoxes.box9) ? 0 : inputBoxes.box9}</td>
           <td><input name="box9" onChange={handleChange}></input></td>
-          <td>200</td>
+          <td className='font-text-size'>200</td>
         </tr>
         <tr>
-          <td></td>
+          <td className='font-text-size'>{isNaN(inputBoxes.box10) ? 0 : inputBoxes.box10}</td>
           <td><input name="box10" onChange={handleChange}></input></td>
-          <td>-200</td>
+          <td className='font-text-size'>-200</td>
         </tr>
       </table>
     </div>

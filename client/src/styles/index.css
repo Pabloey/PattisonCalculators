@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+input,
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  width: 40px;
+  padding: 0px;
+  margin: 0px;
+  display: inline;
+}
+
+.font-text-size {
+  font-size: 24px;
+  font-family: Roboto;
+}
